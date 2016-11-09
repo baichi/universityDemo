@@ -1,0 +1,464 @@
+html {
+    font-size: 100px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.all {
+    background: url("../img/1_back.png") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+.first {
+    height: 10rem;
+    width: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4.5rem 0 0 -3rem;
+
+}
+
+.first p {
+    height: 8%;
+    text-align: center;
+    font-size: .5rem;
+    color: #007aff;
+    -webkit-animation: zoomIn 2s;
+    animation: zoomIn 2s;
+}
+
+.first div img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    box-shadow: gray .1rem .1rem;
+}
+
+.first div:nth-child(1) {
+    float: left;
+    width: 48%;
+    height: 30%;
+    -webkit-animation: bounceInLeft 1.8s both;
+    animation: bounceInLeft 1.8s both;
+    z-index: 20000;
+}
+
+.first div:nth-child(2) {
+    float: left;
+    width: 48%;
+    margin-left: 4%;
+    height: 30%;
+    -webkit-animation: bounceInRight 1.8s both;
+    animation: bounceInRight 1.8s both;
+    z-index: 2000;
+}
+
+.first div:nth-child(3) {
+    float: left;
+    width: 48%;
+    height: 30%;
+    margin: 4% 0 4% 0;
+    -webkit-animation: bounceInLeft 1.8s .5s both;
+    animation: bounceInLeft 1.8s .5s both;
+    z-index: 2000;
+}
+
+.first div:nth-child(4) {
+    float: left;
+    width: 48%;
+
+    height: 30%;
+    margin: 4% 0 4% 4%;
+    -webkit-animation: bounceInRight 1.8s .5s both;
+    animation: bounceInRight 1.8s .5s both;
+    z-index: 2000;
+}
+
+.first div:nth-child(5) {
+    float: left;
+    width: 48%;
+    height: 30%;
+    -webkit-animation: bounceInLeft 1.8s 1s both;
+    animation: bounceInLeft 1.8s 1s both;
+    z-index: 2000;
+
+}
+
+.first div:nth-child(6) {
+    float: left;
+    width: 48%;
+    margin-left: 4%;
+    height: 30%;
+    -webkit-animation: bounceInRight 1.8s 1s both;
+    animation: bounceInRight 1.8s 1s both;
+    z-index: 2000;
+}
+
+.hbu_swiper {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    position: relative;
+}
+
+.hbu_swiper .hbu_return {
+    position: absolute; /*他是相对于具有position：relative/absolute的父级元素定位的，如果父级元素都没有这个属性值，才是针对body定位的*/
+    z-index: 2000;
+    top: .2rem;
+    right: .2rem;
+    width: .64rem;
+    height: .75rem;
+    background: url("../img/zf_return.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.swiper-container, .swiper-wrapper, .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    /*父级元素加了position：relative；，那么后代元素在定位的时候相对当前的父级元素定位*/
+
+}
+
+.page1 {
+    background: url("../img/beijing.jpg") no-repeat;
+    background-size: cover;
+}
+
+.page1_section {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.page1_section p {
+    font-size: .3rem;
+    color: #54c83c;
+    margin-left: .2rem;
+}
+
+.page1_section p:nth-of-type(1) {
+    margin-left: .2rem;
+}
+
+.page1_section img {
+    height: 1rem;
+    width: 1rem;
+    float: none;
+    margin-right: 50%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    opacity: 0;
+}
+
+.page1_section figure {
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    float: none;
+    margin-left: 10%;
+    margin-bottom: 10%;
+
+}
+
+#page1 .page1_section figure {
+    -webkit-animation: bounceInRight 2s, tada 2s 2s infinite forwards;
+    animation: bounceInRight 2s, tada 2s 2s infinite forwards;
+}
+
+#page1 .page1_section img {
+    -webkit-animation: bounceInRight 2s, tada 2s 2s infinite forwards;
+    animation: bounceInRight 2s, tada 2s 2s infinite forwards;
+}
+
+#page1 .page1_section > img:nth-of-type(1) {
+    -webkit-animation: bounceInDown 2s, tada 2s 2s infinite forwards;
+    animation: bounceInDown 2s, tada 2s 2s infinite forwards;
+}
+
+#page1 .page1_section > img:nth-of-type(2) {
+    -webkit-animation: bounceInUp 2s, tada 2s 2s infinite forwards;
+    animation: bounceInUp 2s, tada 2s 2s infinite forwards;
+}
+
+.page1_section figure img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.page2 {
+    background: -webkit-linear-gradient(top left, lightblue, lightcyan, lightgreen, lightskyblue);
+}
+
+.page2 .p2_img {
+    height: 2rem;
+    width: 2rem;
+    float: right;
+    margin-top: .7rem;
+    border-radius: 10%;
+    box-shadow: gray .1rem .1rem;
+    opacity: 0;
+}
+
+.page2 .p2_img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+}
+
+.page2 h2 {
+    text-align: center;
+    height: .5rem;
+    line-height: .5rem;
+    font-family: Microsoft JhengHei;
+    font-size: .4rem;
+    opacity: 0;
+}
+
+.page2 p {
+    font-size: .25rem;
+    color: #503623;
+    opacity: 0;
+}
+
+#page2 .p2_img {
+    -webkit-animation: bounceInUp 1s both;
+    animation: bounceInUp 1s both;
+}
+
+#page2 h2 {
+    -webkit-animation: bounceInRight 1s both;
+    animation: bounceInRight 1s both;
+}
+
+#page2 p:nth-of-type(1) {
+    -webkit-animation: bounceInLeft 2s .5s both;
+    animation: bounceInLeft 2s .5s both;
+}
+
+#page2 p:nth-of-type(2) {
+    -webkit-animation: bounceInLeft 2s 1s both;
+    animation: bounceInLeft 2s 1s both;
+}
+
+#page2 p:nth-of-type(3) {
+    -webkit-animation: bounceInLeft 2s 1.5s both;
+    animation: bounceInLeft 2s 1.5s both;
+}
+
+.page3 {
+    background: -webkit-linear-gradient(top left, #e6e650, #a2abff, #5aee5d, #44fa8f);
+}
+
+.page3 h2 {
+    text-align: center;
+    color: #d924fa;
+    height: .5rem;
+    line-height: .5rem;
+    font-family: Microsoft JhengHei;
+    font-size: .4rem;
+    opacity: 0;
+}
+
+#page3 h2 {
+    -webkit-animation: rollIn 2s both;
+    animation: rollIn 2s both;
+}
+
+.page3 div {
+    height: 4rem;
+    width: 5.5rem;
+}
+
+.page3 div img {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+#page3 div .img1 {
+    -webkit-animation: lightSpeedIn 2s forwards;
+    animation: lightSpeedIn 2s forwards;
+}
+
+#page3 div .img2 {
+    -webkit-animation: lightSpeedIn 2s 2s forwards;
+    animation: lightSpeedIn 2s 2s forwards;
+}
+
+#page3 div .img3 {
+    -webkit-animation: lightSpeedIn 2s 4s forwards;
+    animation: lightSpeedIn 2s 4s forwards;
+}
+
+.page3 div:nth-of-type(1) {
+    position: absolute;
+    top: 2rem;
+    left: .5rem;
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+.page3 div:nth-of-type(2) {
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+
+.page3 div:nth-of-type(3) {
+    position: absolute;
+    top: 6rem;
+    left: .5rem;
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+.page4 {
+    background: url("../img/text.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page4 section {
+    position: absolute;
+    top: 3.6rem;
+    left: 1rem;
+    width: 4rem;
+    font-size: .28rem;
+    color: #fa6657;
+    font-style: italic;
+    opacity: 0;
+}
+
+#page4 section {
+    -webkit-animation: fadeInRight 2s forwards, flash 2s 2s forwards;
+    animation: fadeInRight 2s forwards, flash 2s 2s forwards;
+}
+
+.page5 {
+    background: url("../img/want.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page5 section h2 {
+    font-family: Microsoft JhengHei;
+    line-height: 2rem;
+    height: 2rem;
+    font-size: .4rem;
+    text-align: center;
+    opacity: 0;
+}
+
+#page5 section h2 {
+    -webkit-animation: swing 2s 2 forwards;
+    animation: swing 2s 2 forwards;
+}
+
+.page5 section ul li {
+    font-size: .3rem;
+    color: #ce5331;
+    opacity: 0;
+}
+
+#page5 section ul li:nth-of-type(1) {
+    -webkit-animation: rotateInDownLeft 1s both;
+    animation: rotateInDownLeft 1s both;
+}
+
+#page5 section ul li:nth-of-type(2) {
+    -webkit-animation: rotateInDownLeft 1s 1s both;
+    animation: rotateInDownLeft 1s 1s both;
+}
+
+#page5 section ul li:nth-of-type(3) {
+    -webkit-animation: rotateInDownLeft 1s 2s both;
+    animation: rotateInDownLeft 1s 2s both;
+}
+
+#page5 section ul li:nth-of-type(4) {
+    -webkit-animation: rotateInDownLeft 1s 3s both;
+    animation: rotateInDownLeft 1s 3s both;
+}
+
+.page6 {
+    background: url("../img/bye.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page6 figure {
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    margin: -2rem 0 0 -2rem;
+}
+
+.page6 h2 {
+    font-size: .4rem;
+    text-align: center;
+    margin-top: .2rem;
+    border-bottom: dashed #533e2d;
+    color: #5ffa28;
+    opacity: 0;
+}
+
+.page6 p {
+    margin-left: .3rem;
+    opacity: 0;
+}
+
+.page6 p:nth-of-type(1) {
+    font-size: .3rem;
+    color: blue;
+    margin-top: .5rem;
+}
+
+.page6 p:nth-of-type(2) {
+    font-size: .3rem;
+    color: yellow;
+    margin-top: 1rem;
+}
+
+.page6 p:nth-of-type(3) {
+    font-size: .3rem;
+    color: #190f2a;
+    margin-top: 1.5rem;
+}
+
+.page6 figure img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+#page6 h2 {
+    -webkit-animation: bounceInUp 2s both;
+    animation: bounceInUp 2s both;
+}
+
+#page6 p {
+    -webkit-animation: zoomIn 2s forwards;
+    animation: zoomIn 2s forwards;
+}
+
+#page6 figure img {
+    -webkit-animation: flash 2s both;
+    animation: flash 2s both;
+}
