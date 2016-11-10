@@ -1,0 +1,623 @@
+html {
+    font-size: 100px; /*640下的设计稿：1REM=100px*/
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tip {
+    background: linear-gradient(mediumslateblue, plum, blueviolet);
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+}
+
+.tip h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3.9rem 0 0 -2.3rem;
+    color: #FFFFFF;
+    font-size: .5rem;
+    opacity: 0;
+    text-shadow: .02rem .02rem 0 black;
+
+    -webkit-animation: bounceInLeft 1.5s forwards;
+    animation: bounceInLeft 1.5s forwards;
+}
+
+.tip h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.4rem 0 0 -1.3rem;
+    color: #FFFFFF;
+    font-size: .4rem;
+    opacity: 0;
+    text-shadow: .02rem .02rem 0 black;
+
+    -webkit-animation: bounceInRight 1.5s 2s forwards;
+    animation: bounceInRight 1.5s forwards;
+}
+
+.tip p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.8rem 0 0 -2.2rem;
+    color: #FFFFFF;
+    font-size: .4rem;
+    opacity: 0;
+
+    -webkit-animation: wobble .5s 1s forwards;
+    animation: wobble 1s 2s forwards;
+    text-shadow: 2px 2px 0 black;
+}
+
+.tip em {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 2.7rem 0 0 .45rem;
+    color: #FFFFFF;
+    font-size: .22rem;
+    opacity: 0;
+
+    -webkit-animation: wobble .5s 1s forwards;
+    animation: wobble 1s 2s forwards;
+    text-shadow: 2px 2px 0 black;
+}
+
+.hbu_cube {
+    display: none;
+    width: 6.5rem;
+    height: 12rem;
+    background: pink;
+    background-size: cover;
+    perspective: 2000px;
+}
+
+.hbu_cube .cube_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.5rem 0 0 -2.5rem;
+    width: 5.1rem;
+    height: 5.1rem;
+
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform-origin: center center 0;
+    transform-origin: center center 0;
+
+    -webkit-transform: scale(0.6) rotateY(30deg) rotateX(45deg);
+    transform: scale(0.6) rotateY(30deg) rotateX(45deg);
+
+    /*让魔方在旋转的时候有动画过渡效果*/
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.hbu_cube .cube_tip {
+    font-size: .5rem;
+    color: #FFFFFF;
+    margin-bottom: 4.5rem;
+
+}
+
+.hbu_cube .cube_box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.55rem 0 0 -2.55rem;
+    width: 100%;
+    height: 100%;
+
+}
+
+.hbu_cube .cube_box img:nth-child(1) {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(90deg);
+
+    -webkit-transform: translateZ(2.55rem);
+    transform: translateZ(2.55rem);
+}
+
+.hbu_cube .cube_box img:nth-child(2) {
+    -webkit-transform: translateZ(-2.55rem) rotateY(180deg);
+    transform: translateZ(-2.55rem) rotateY(180deg);
+}
+
+.hbu_cube .cube_box img:nth-child(3) {
+    -webkit-transform: translateX(-2.55rem) rotateY(-90deg);
+    transform: translateX(-2.55rem) rotateY(-90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(4) {
+    -webkit-transform: translateX(2.55rem) rotateY(90deg);
+    transform: translateX(2.55rem) rotateY(90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(5) {
+    -webkit-transform: translateY(-2.55rem) rotateX(-90deg);
+    transform: translateY(-2.55rem) rotateX(-90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(6) {
+    -webkit-transform: translateY(2.55rem) rotateX(90deg);
+    transform: translateY(2.55rem) rotateX(90deg);
+}
+
+/*.hbu_cube .cube_tip {
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -1.97rem;
+    width: 3.94rem;
+    height: .44rem;
+    background: url("../img/zf_cubeTip.png") no-repeat;
+    background-size: 100% 100%;
+}*/
+
+/*--SWIPER--*/
+.hbu_swiper {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+}
+
+.hbu_swiper .hbu_return {
+    z-index: 2000;
+    position: absolute;
+    top: .1rem;
+    right: .1rem;
+    width: .6rem;
+    height: .6rem;
+    background: url("../img/zf_return.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.swiper-container, .swiper-wrapper, .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+/*PAGE1*/
+.page1 {
+    background: radial-gradient(mediumpurple, black);
+}
+
+.page1 .p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3rem 0 0 -2rem;
+    color: #FFFFFF;
+    font-size: .4rem;
+    text-shadow: .02rem .02rem 0 black;
+    opacity: 0;
+}
+
+#page1 .p1 {
+    -webkit-animation: bounceInLeft 1.5s 0s forwards;
+    animation: bounceInLeft 1.5s 0s forwards;
+}
+
+.page1 .p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2rem 0 0 -2rem;
+    color: #FFFFFF;
+    font-size: .4rem;
+    text-shadow: .02rem .02rem 0 black;
+    opacity: 0;
+}
+
+#page1 .p2 {
+    -webkit-animation: bounceInLeft 1.5s 1.5s forwards;
+    animation: bounceInRight 1.5s 1.5s forwards;
+}
+
+.page1 .p3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1rem 0 0 -2rem;
+    color: #FFFFFF;
+    font-size: .4rem;
+    text-shadow: .02rem .02rem 0 black;
+    opacity: 0;
+}
+
+#page1 .p3 {
+    -webkit-animation: bounceInLeft 1.5s 3s forwards;
+    animation: bounceInLeft 1.5s 3s forwards;
+}
+
+.page1 .p4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0.7rem 0 0 -2rem;
+    color: #FFFFFF;
+    font-size: .4rem;
+    text-shadow: .02rem .02rem .01rem black;
+    opacity: 0;
+}
+
+#page1 .p4 {
+    -webkit-animation: bounceInRight 1.5s 4.5s forwards;
+    animation: bounceInLeft 1.5s 4.5s forwards;
+}
+
+/*PAGE2*/
+.page2 {
+    background: mediumpurple;
+}
+
+.page2 h2 {
+    position: absolute;
+    left: 0;
+    top: .8rem;
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    color: #665C50;
+    font-size: .5rem;
+    font-family: Microsoft JhengHei; /*设置字体的样式:文字是黑体*/
+    font-weight: normal; /*normal:文字不加粗,bold/bolder:文字加粗*/
+    opacity: 0;
+}
+
+.page2 .imgBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.4rem 0 0 -2.56rem; /*定位在中间后还需要下移50PX:-2.9+.5*/
+    width: 5.12rem;
+    height: 5.8rem;
+}
+
+.page2 .imgBox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.5rem 0 0 -.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.page2 .imgBox img:nth-child(1) {
+    margin: -.85rem 0 0 -.66rem;
+    width: 1.32rem;
+    height: 1.7rem;
+    border-radius: 0;
+}
+
+#page2 .imgBox img:nth-child(1) {
+    -webkit-animation: wobble 1s 3 forwards;
+    animation: wobble 1s 3 forwards;
+}
+
+#page2 .imgBox img:nth-child(2) {
+    -webkit-animation: page2Move1 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move1 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(3) {
+    -webkit-animation: page2Move2 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move2 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(4) {
+    -webkit-animation: page2Move3 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move3 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(5) {
+    -webkit-animation: page2Move4 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move4 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(6) {
+    -webkit-animation: page2Move5 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move5 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(7) {
+    -webkit-animation: page2Move6 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move6 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 h2 {
+    -webkit-animation: bounceInLeft 1s both;
+    animation: bounceInLeft 1s both;
+}
+
+/*PAGE3*/
+.page3 {
+    background: paleturquoise;
+}
+
+.page3 dl {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3.6rem 0 0 -2.7rem;
+    width: 5.4rem;
+    height: 7.2rem;
+    font-size: .3rem;
+}
+
+.page3 dl dt {
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    color: yellow;
+    font-size: .4rem;
+    background: deepskyblue;
+}
+
+.page3 dl dd {
+    position: relative;
+    padding-left: .64rem;
+    height: .58rem;
+    line-height: .58rem;
+    border-top: .02rem dashed rgba(255, 255, 255, 0.3);
+    background: deepskyblue;
+}
+
+.page3 dl dd em {
+    z-index: 1000; /*调整层级*/
+    position: absolute;
+    left: .15rem;
+    top: 50%;
+    margin-top: -.24rem;
+    width: .36rem;
+    height: .42rem;
+    line-height: .42rem;
+    text-align: center;
+    color: #FFF;
+    font-size: .2rem;
+    font-style: normal;
+
+}
+
+.page3 dl dd a {
+    position: relative;
+    z-index: 1000; /*调整层级*/
+    display: block;
+    color: #000;
+    font-size: .28rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*.page3 .teacherItem li p:nth-child(1) {/!*li下所有的孩子中,第一个孩子并且是p标签*!/
+    line-height: .5rem;
+    text-align: center;
+}
+
+.page3 .teacherItem li p:nth-child(1) {
+    line-height: .32rem;
+    text-align: left;
+}*/
+
+/*PAGE4*/
+.page4 {
+    background: #FAC471;
+}
+
+.page4 img {
+    width: 3.15rem;
+    height: 3rem;
+    opacity: 0;
+}
+
+.page4 img:nth-child(1) {
+    -webkit-transform: rotate(30deg) translate(.8rem, .6rem);
+    transform: rotate(30deg) translate(.8rem, .6rem);
+}
+
+#page4 img:nth-child(1) {
+    -webkit-animation: fadeIn 1.5s forwards;
+    animation: fadeIn 1.5s forwards;
+}
+
+.page4 img:nth-child(2) {
+    -webkit-transform: rotate(-20deg) translate(-.4rem, .6rem);
+    transform: rotate(-20deg) translate(-.4rem, .6rem);
+}
+
+#page4 img:nth-child(2) {
+    -webkit-animation: fadeIn 1.5s .5s forwards;
+    animation: fadeIn 1.5s .5s forwards;
+}
+
+.page4 img:nth-child(3) {
+    -webkit-transform: rotate(10deg) translate(.8rem, .5rem);
+    transform: rotate(10deg) translate(.8rem, .5rem);
+
+}
+
+#page4 img:nth-child(3) {
+    -webkit-animation: fadeIn 1.5s 1s forwards;
+    animation: fadeIn 1.5s 1s forwards;
+}
+
+.page4 img:nth-child(4) {
+    -webkit-transform: rotate(-20deg) translate(-.3rem, .5rem);
+    transform: rotate(-20deg) translate(-.3rem, .5rem);
+}
+
+#page4 img:nth-child(4) {
+    -webkit-animation: fadeIn 1.5s 1.5s forwards;
+    animation: fadeIn 1.5s 1.5s forwards;
+}
+
+.page4 img:nth-child(5) {
+    -webkit-transform: rotate(40deg) translate(1rem, -.2rem);
+    transform: rotate(40deg) translate(1rem, -.2rem);
+}
+
+#page4 img:nth-child(5) {
+    -webkit-animation: fadeIn 1.5s 2s forwards;
+    animation: fadeIn 1.5s 2s forwards;
+}
+
+.page4 img:nth-child(6) {
+    -webkit-transform: rotate(-30deg) translate(0rem, .5rem);
+    transform: rotate(-30deg) translate(0rem, .5rem);
+}
+
+#page4 img:nth-child(6) {
+    -webkit-animation: fadeIn 1.5s 2.5s forwards;
+    animation: fadeIn 1.5s 2.5s forwards;
+}
+
+/*PAGE5*/
+.page5 {
+    background: url("../img/weixinbg.jpg");
+    width: 7rem;
+    height: 11rem;
+}
+
+.page5 img {
+    position: absolute;
+}
+
+.page5 .img2 {
+    width: 2.5rem;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#page5 .img2 {
+    -webkit-animation: bounceInLeft 1.5s forwards;
+    animation: bounceInLeft 1.5s forwards;
+}
+
+.page5 .img3 {
+    width: 3.6rem;
+    top: 1rem;
+    right: 0;
+    opacity: 0;
+}
+
+#page5 .img3 {
+    -webkit-animation: bounceInRight 1.5s 1s forwards;
+    animation: bounceInRight 1.5s 1s forwards;
+}
+
+.page5 .img4 {
+    width: 2rem;
+    top: 2rem;
+    left: 0;
+    opacity: 0;
+}
+
+#page5 .img4 {
+    -webkit-animation: bounceInLeft 1.5s 2s forwards;
+    animation: bounceInLeft 1.5s 2s forwards;
+}
+
+.page5 .img5 {
+    width: 2.4rem;
+    top: 3rem;
+    right: 0;
+    opacity: 0;
+}
+
+#page5 .img5 {
+    -webkit-animation: bounceInRight 1.5s 3s forwards;
+    animation: bounceInRight 1.5s 3s forwards;
+}
+
+/*PAGE6*/
+.page6 {
+    background: url("../img/contact.jpeg");
+    width: 7rem;
+}
+
+.page6 h1 {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+    opacity: 0;
+}
+
+#page6 h1 {
+    -webkit-animation: bounceInLeft 1.5s forwards;
+    animation: bounceInLeft 1.5s forwards;
+}
+
+.page6 img {
+    display: block;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 3rem;
+    height: 3.5rem;
+    opacity: 0;
+}
+
+#page6 img {
+    -webkit-animation: bounceInLeft 1.5s .5s forwards;
+    animation: bounceInLeft 1.5s .5s forwards;
+}
+
+.page6 p {
+    text-align: center;
+    font-size: .4rem;
+    margin-top: .5rem;
+    opacity: 0;
+}
+
+#page6 p {
+    -webkit-animation: bounceInLeft 1.5s 1s forwards;
+    animation: bounceInLeft 1.5s 1s forwards;
+}
+
+.page6 h2 {
+    text-align: center;
+    font-size: .4rem;
+    opacity: 0;
+}
+
+#page6 h2 {
+    -webkit-animation: bounceInLeft 1.5s 1.5s forwards;
+    animation: bounceInLeft 1.5s 1.5s forwards;
+}
+
+.page6 h3 {
+    text-align: center;
+    font-size: .4rem;
+    opacity: 0;
+}
+
+#page6 h3 {
+    -webkit-animation: bounceInLeft 1.5s 2s forwards;
+    animation: bounceInLeft 1.5s 2s forwards;
+}
+
+
+
+
+
+
