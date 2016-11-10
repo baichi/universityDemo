@@ -1,0 +1,372 @@
+html {
+    font-size: 100px; /*640设计稿:1REM=100PX*/
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*--CUBE--*/
+.hbu_cube {
+    width: 100%;
+    height: 100%;
+    background: url("../img/zf_cubeBg.jpg") no-repeat;
+    background-size: cover;
+
+    perspective: 2000px;
+}
+
+.hbu_cube .cube_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2rem 0 0 -2rem;
+    width: 4rem;
+    height: 4rem;
+
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform-origin: center center 0;
+    transform-origin: center center 0;
+
+    /*-webkit-transform: scale(0.6) rotateY(30deg) rotateX(45deg);
+    transform: scale(0.6) rotateY(30deg) rotateX(45deg);*/
+
+    /*让魔方在旋转的时候有动画过渡效果*/
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.hbu_cube .cube_box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2rem 0 0 -2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.hbu_cube .cube_box img:nth-child(1) {
+    -webkit-transform: translateZ(2rem);
+    transform: translateZ(2rem);
+}
+
+.hbu_cube .cube_box img:nth-child(2) {
+    -webkit-transform: translateZ(-2rem) rotateY(180deg);
+    transform: translateZ(-2rem) rotateY(180deg);
+}
+
+.hbu_cube .cube_box img:nth-child(3) {
+    -webkit-transform: translateX(-2rem) rotateY(-90deg);
+    transform: translateX(-2rem) rotateY(-90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(4) {
+    -webkit-transform: translateX(2rem) rotateY(90deg);
+    transform: translateX(2rem) rotateY(90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(5) {
+    -webkit-transform: translateY(-2rem) rotateX(-90deg);
+    transform: translateY(-2rem) rotateX(-90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(6) {
+    -webkit-transform: translateY(2rem) rotateX(90deg);
+    transform: translateY(2rem) rotateX(90deg);
+}
+
+.hbu_cube .cube_tip {
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -1.97rem;
+    width: 3.94rem;
+    height: .44rem;
+    background: url("../img/zf_cubeTip.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*--SWIPER--*/
+.hbu_swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+}
+
+.hbu_swiper .hbu_return {
+    z-index: 2000;
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+    width: .64rem;
+    height: .75rem;
+    background: url("../img/return.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.swiper-container, .swiper-wrapper, .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+/*PAGE1*/
+.page1 {
+    background: #f4f4f4;
+
+}
+
+.page1 dl {
+
+    padding:.3rem;
+
+}
+
+.page1 dl dt {
+    font-size: .4rem;
+    line-height: 1rem;
+    font-family: "微软雅黑";
+    font-weight: 700;
+    color: #ff6f69;
+    text-align: center;
+    margin:.5rem auto .3rem;
+    border-bottom:1px solid #dddddd;
+
+}
+
+.page1 dl dd {
+    z-index: 1000;
+    height: 1rem;
+    line-height:1rem;
+    font-size: .28rem;
+    border-bottom:1px solid #dddddd;
+
+}
+
+.page1 dl dd label {
+    z-index: 1000;
+
+    display: inline-block;
+    width: 1.3rem;
+    color:#ff6f69;
+}
+
+.page1 dl dd span {
+    z-index: 1000;
+
+    text-align: left;
+    color:#333333;
+
+}
+#page1 dt{
+    -webkit-animation: bounce 1s  infinite forwards;
+    animation: bounce 1s  infinite forwards;
+}
+/*PAGE2*/
+.page2 {
+    background: #f4f4f4;
+}
+
+.page2 h2 {
+    position: absolute;
+    left: 0;
+    top: .8rem;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+
+    font-size: .4rem;
+    font-family: "微软雅黑"; /*设置字体的样式:文字是黑体*/
+    font-weight: 700; /*normal:文字不加粗,bold/bolder:文字加粗*/
+
+    opacity: 0;
+
+    font-weight: 700;
+    color: #ff6f69;
+
+
+}
+
+.page2 .imgBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.4rem 0 0 -2.56rem; /*定位在中间后还需要下移50PX:-2.9+.5*/
+    width: 5.12rem;
+    height: 5.8rem;
+}
+
+.page2 .imgBox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.5rem 0 0 -.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+
+    opacity: 0;
+}
+
+.page2 .imgBox img:nth-child(1) {
+    margin: -.85rem 0 0 -.66rem;
+    width: 1.32rem;
+    height: 1.7rem;
+    border-radius: 0;
+}
+
+/*把我们当前第二页需要运动的动画都放在#PAGE2下*/
+#page2 .imgBox img:nth-child(1) {
+    -webkit-animation: wobble 1s 3 forwards;
+    animation: wobble 1s 3 forwards;
+}
+
+#page2 .imgBox img:nth-child(2) {
+    -webkit-animation: page2Move1 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move1 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(3) {
+    -webkit-animation: page2Move2 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move2 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(4) {
+    -webkit-animation: page2Move3 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move3 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(5) {
+    -webkit-animation: page2Move4 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move4 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(6) {
+    -webkit-animation: page2Move5 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move5 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(7) {
+    -webkit-animation: page2Move6 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move6 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 h2 {
+    -webkit-animation: bounceInLeft 1s both;
+    animation: bounceInLeft 1s both;
+}
+/*PAGE3*/
+.page3 {
+   /* background: #ff4343;*/
+    background: #f4f4f4;
+}
+.page3 .myImg{
+    width: 1.7rem;
+    height:1.7rem;
+    border:1px solid transparent;
+    border-radius: .85rem;
+    background: #ff6f69;
+    margin:.7rem auto 0;
+}
+.page3 .myImg img{
+    display: block;
+    border-radius: .75rem;
+    margin:.09rem auto;
+    width:1.5rem;
+    height: 1.5rem;
+}
+.page3 .myNews{
+    text-align: center;
+    /*border-bottom: 1px solid #ddd;*/
+    padding: .2rem;
+
+    margin:0 auto;
+}
+.page3 .myNews h2{
+    font-size: .4rem;
+    line-height: .7rem;
+    font-family: "微软雅黑";
+    font-weight: 700;
+    color: #ff6f69;
+
+}
+.page3 .myNews h4{
+    font-size: .3rem;
+    line-height: .5rem;
+    font-weight: 600;
+    color: #333333;
+
+}
+.page3 .myNews p{
+    font-family: "微软雅黑";
+    font-weight: 400;
+    color: #333333;
+    font-size: .28rem;
+    line-height: .58rem;
+}
+.page3 .my_p{
+    padding:.3rem;
+    margin:0 auto;
+
+}
+.page3 .my_p p{
+    font-size: .28rem;
+    line-height: .58rem;
+    color: #333333;
+    font-weight: 400;
+}
+
+/*myimg   -webkit-animation-name: bounce;
+  animation-name: bounce;*/
+#page3 .myImg{
+    -webkit-animation: tangle 1s  infinite forwards;
+    animation: tangle 1s  infinite forwards;
+}
+#page3 .my_p{
+    -webkit-animation: fadeIn 1s 1 forwards;
+    animation: fadeIn 1s 1 forwards;
+}
+
+/*PAGE4*/
+.page4 {
+   /* background:url("../img/side.jpg") no-repeat;
+    background-size: 100% 100%;*/
+    background: #f4f4f4;
+}
+.page4 h3{
+    height:1rem;
+    font-size: .4rem;
+    line-height: 1rem;
+    font-family: "微软雅黑";
+    font-weight: 700;
+    color: #ff6f69;
+    text-align: center;
+    margin-top: .5rem;
+}
+.page4 p{
+    font-size: .28rem;
+    line-height: .58rem;
+    color: #333333;
+    font-weight: 400;
+    padding:0 .3rem;
+}
+.page4 img{
+    height: 5rem;
+}
+#page4 p{
+    -webkit-animation: slideInDown 1s  1 forwards;
+    animation: slideInDown 1s  1 forwards;
+}
+#page4 img{
+    -webkit-animation: rotateOutDownLeft 1s 2;
+    animation: rotateOutDownLeft 1s 2;
+}
