@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-webApp-app-capable" content="yes"/>
+    <meta name="apple-mobile-webApp-app-status-bar-style" content="black">
+    <title>王晓童个人简历</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<a style="display:none;position:absolute;top:0;left: 0;z-index:2000;box-sizing:border-box;padding-left:.2rem;width:100%;height: .5rem;line-height: .5rem; background: rgba(0,0,0,0.3);color: #FFF;"
+   href="javascript:;" id="goBack">返回主页</a>
+<script type="text/javascript">
+    ~function () {
+        function fn(str) {
+            var reg = /([^?=&#]+)=([^?=&#]+)/g,
+                    obj = {};
+            str.replace(reg, function () {
+                obj[arguments[1]] = arguments[2];
+            });
+            return obj;
+        }
+
+        var goBack = document.getElementById('goBack');
+        var obj = fn(window.location.href),
+                phone = obj['phone'];
+        if (phone) {
+            phone = decodeURIComponent(phone);
+            goBack.style.display = 'block';
+            goBack.onclick = function () {
+                window.location.href = phone;
+            };
+        }
+    }();
+</script>
+
+<section class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide pageFir" trueId="page1">
+            <img src="img/first3.png" alt="">
+            <img src="img/first2.png" alt="">
+            <img src="img/first1.png" alt="">
+            <img src="img/first4.png" alt="">
+
+            <p>王晓童</p>
+
+            <p class="line"></p>
+
+            <p class="line"></p>
+        </div>
+
+        <div class="swiper-slide pageSec" trueId="page2">
+            <img src="img/second1.png" alt="">
+            <img src="img/second2.png" alt="">
+            <img src="img/second3.png" alt="">
+            <img src="img/second4.png" alt="">
+            <img src="img/t.png" alt="">
+
+            <p class="title">个人信息</p>
+
+            <p class="title"></p>
+
+            <p class="line"></p>
+
+            <p class="line"></p>
+
+            <p class="info">
+                <span>姓名:王晓童</span>
+                <span>学历:本科</span>
+                <span>专业:软件工程</span>
+                <span>联系方式:18233298769</span>
+                <span>邮箱:1393193578@qq.com</span>
+            </p>
+
+        </div>
+        <div class="swiper-slide pageThr" trueId="page3">
+            <img src="img/third1.png" alt="">
+
+            <p>求职意向</p>
+
+            <p></p>
+
+            <p class="line"></p>
+
+            <p class="line"></p>
+
+            <p>前端工程师</p>
+        </div>
+        <div class="swiper-slide pageFour" trueId="page4">
+            <img src="img/four1.png" alt="">
+
+            <p>我的能力</p>
+
+            <p></p>
+
+            <p class="line"></p>
+
+            <p class="line"></p>
+            <img src="img/four2.png" alt="">
+            <img src="img/four2.png" alt="">
+            <img src="img/four2.png" alt="">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <p>熟练掌握HTML和CSS的使用，也会使用HTML5+CSS3，掌握响应式布局，自己做过一些网站制作</p>
+
+            <p>喜爱钻研javascript，因此掌握一定的javascript语言的使用</p>
+
+            <p>喜爱钻研一些后台，自学过后台语言，因此对于后台有一定的了解，</p>
+        </div>
+
+        <div class="swiper-slide pageFive" trueId="page5">
+            <p>我的优势</p>
+
+            <p></p>
+
+            <p class="line"></p>
+
+            <p class="line"></p>
+
+            <p></p>
+
+            <div>
+                <img src="img/five2.png" alt="">
+                <span>兴趣</span>
+            </div>
+            <div>
+                <img src="img/five2.png" alt="">
+                <span>项目</span>
+            </div>
+            <div>
+                <img src="img/five2.png" alt="">
+                <span>坚持</span>
+            </div>
+            <p>只有坚持做一件事，长此以往脚踏实地的钻研才能取得成功</p>
+
+            <p>自己曾写过一些小型网页，移动端h5页面</p>
+
+            <p>喜爱钻研界面设计，经常关注网上最新的各种网站素材的更新，以此拓宽自己的视野，喜爱绘画，打乒乓球，看电影</p>
+        </div>
+        <div class="swiper-slide pageSix" trueId="page6">
+            <img src="img/six1.png" alt="">
+
+            <p>感谢观看</p>
+
+            <p>THANKS</p>
+        </div>
+    </div>
+</section>
+<section class="arrow">
+    <img src="img/up40.png" alt="">
+</section>
+<section class="audio">
+    <audio class="audioMp3" src="audioFile/ALWAYS.mp3" loop preload="none"/>
+</section>
+</body>
+<script src="js/zepto.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/swiper.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/index.js"></script>
+</html>
