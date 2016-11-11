@@ -1,4 +1,4 @@
-/*PAGE2 ͷ��*/
+﻿/*PAGE2 ͷ��*/
 @-webkit-keyframes bounceIn {
     from, 20%, 40%, 60%, 80%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -128,7 +128,7 @@
     to {
         -webkit-transform: none;
         transform: none;
-        opacity: 1;
+        opacity: 0;
 
     }
 }
@@ -168,7 +168,7 @@
     to {
         -webkit-transform: none;
         transform: none;
-        opacity: 1;
+        opacity: 0;
     }
 }
 
