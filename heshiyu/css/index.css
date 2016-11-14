@@ -1,0 +1,791 @@
+@charset "utf-8";
+html {
+    font-size: 100px;
+}
+
+html, body {
+    /*让当前HTML页面的宽度和高度与手机的宽度和高度保持完全一致，而且不允许出现滚动条=>当前页面有且只有一屏幕*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*--AUDIO--*/
+.audio {
+    display: none;
+    position: absolute;
+    top: .1rem;
+    right: .1rem;
+    z-index: 100;
+    width: .3rem;
+    height: .3rem;
+    background: url("../audio/music.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.audio .audioMp3 {
+    display: none;
+}
+
+.audioMove {
+    -webkit-animation: audioMove 1s linear infinite both;
+    animation: audioMove 1s linear infinite both;
+}
+
+@-webkit-keyframes audioMove {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes audioMove {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*--swiper--*/
+.swiper-container, .swiper-wrapper, .swiper-slide {
+    /*让每一个切换的页面都占据满满的一屏幕*/
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    /*父级元素加了position: relative;,那么后代元素在定位的时候相对当前的父级元素定位*/
+}
+
+/*page1*/
+.page1 {
+    background: url("../img/sc_bg8.jpg") no-repeat;
+    background-size: cover; /*cover是按照最合适的宽高比例铺满整个容器*/
+    font-family: Microsoft Jhenghei;
+}
+
+.page1 img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -.7rem;
+    width: 1.4rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.page1 h1 {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    line-height: .5rem;
+    text-align: center;
+    color: #993300;
+    font-size: .5rem;
+    opacity: 0;
+}
+
+#page1 h1 {
+    -webkit-animation: swing 1s .5s both;
+    animation: swing 1s .5s both;
+}
+
+#page1 img {
+    -webkit-animation: bounceInDown 1s .8s both;
+    animation: bounceInDown 1s .8s both;
+}
+
+/*page2*/
+.page2 {
+    background-size: cover;
+    background: -webkit-radial-gradient(#597FFF, #CACACA, #e5e5e5);
+    background: radial-gradient(#597FFF, #CACACA, #e5e5e5);
+    font-family: Microsoft Jhenghei;
+    opacity: 0;
+}
+
+.page2 .photo1 {
+    position: absolute;
+    top: .4rem;
+    left: 50%;
+    margin-left: -1.25rem;
+    width: 2.5rem;
+    height: 1rem;
+    opacity: 0;
+}
+
+.page2 .photo1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.page2 .photo1 .lable1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -.25rem;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+
+    color: #FFF;
+    font-size: .24rem;
+    opacity: 0;
+}
+
+.page2 .photo2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.1rem 0 0 -1.1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0;
+}
+
+.page2 .photo2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.page2 .lable2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 1.3rem 0 0 -1.25rem;
+    font-size: .24rem;
+    opacity: 0;
+}
+
+.page2 .lable3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: .25rem 0 0 -1.25rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+    opacity: 0;
+}
+
+.page2 .lable4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: .05rem 0 0 .7rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+    opacity: 0;
+}
+
+.page2 .lable5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 1.15rem 0 0 .6rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+    opacity: 0;
+}
+
+#page2 {
+    -webkit-animation: fadeIn 1s 0s both;
+    animation: fadeIn 1s 0s both;
+}
+
+#page2 .photo1 {
+    -webkit-animation: bounceInDown 1s .5s both;
+    animation: bounceInDown 1s .5s both;
+}
+
+#page2 .photo1 .lable1 {
+    -webkit-animation: bounceInDown 1s 1s both;
+    animation: bounceInDown 1s 1s both;
+}
+
+#page2 .photo2 {
+    -webkit-animation: pulse 1s 1.5s both;
+    animation: pulse 1s 1.5s both;
+}
+
+#page2 .lable2 {
+    -webkit-animation: bounceInLeft 1s 1s both;
+    animation: bounceInLeft 1s 1s both;
+}
+
+#page2 .lable3 {
+    -webkit-animation: bounceInLeft 2s 1s both;
+    animation: bounceInLeft 2s 1s both;
+}
+
+#page2 .lable4 {
+    -webkit-animation: bounceInRight 2s 1s both;
+    animation: bounceInRight 2s 1s both;
+}
+
+#page2 .lable5 {
+    -webkit-animation: bounceInRight 2s 1s both;
+    animation: bounceInRight 2s 1s both;
+}
+
+/*page3*/
+.page3 {
+    background: url("../img/sc_tiger4.jpg") no-repeat;
+    background-size: cover;
+}
+
+.page3 .title .title1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.65rem 0 0 -1.6rem;
+    font-size: 28px;
+    font-family: Microsoft Jhenghei;
+}
+
+.page3 .title .title2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.3rem 0 0 -1rem;
+    font-size: 27px;
+    font-family: Microsoft Jhenghei;
+}
+
+.page3 .left .fir_left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.15rem 0 0 -.92rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+}
+
+.page3 .left .two_left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: .05rem 0 0 -.92rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+}
+
+.page3 .left .thr_left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 1rem 0 0 -.92rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+}
+
+.page3 .right .fir_right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.5rem 0 0 -.92rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+}
+
+.page3 .right .two_right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: .5rem 0 0 -.92rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+}
+
+.page3 .right .thr_right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 1.55rem 0 0 -.92rem;
+    font-size: 16px;
+    font-family: Microsoft Jhenghei;
+}
+
+.page3 .midPar {
+    border-left: solid;
+    border-color: #00FF00;
+}
+
+#page3 {
+    -webkit-animation: fadeIn .5s .5s both;
+    animation: fadeIn .5s .5s both;
+}
+
+#page3 .title .title1 {
+    -webkit-animation: bounceInDown 1s 1s both;
+    animation: bounceInDown 1s 1s both;
+}
+
+#page3 .title .title2 {
+    -webkit-animation: bounceInDown 1s 1s both;
+    animation: bounceInDown 1s 1s both;
+}
+
+#page3 .left .fir_left {
+    -webkit-animation: bounceInLeft 2s 1s both;
+    animation: bounceInLeft 2s 1s both;
+}
+
+#page3 .left .two_left {
+    -webkit-animation: bounceInRight 2s 1s both;
+    animation: bounceInRight 2s 1s both;
+}
+
+#page3 .left .thr_left {
+    -webkit-animation: bounceInLeft 2s 1s both;
+    animation: bounceInLeft 2s 1s both;
+}
+
+#page3 .right .fir_right {
+    -webkit-animation: bounceInRight 2s 1s both;
+    animation: bounceInRight 2s 1s both;
+}
+
+#page3 .right .two_right {
+    -webkit-animation: bounceInLeft 2s 1s both;
+    animation: bounceInLeft 2s 1s both;
+}
+
+#page3 .right .thr_right {
+    -webkit-animation: bounceInRight 2s 1s both;
+    animation: bounceInRight 2s 1s both;
+}
+
+/*page4*/
+.page4 {
+    background: -webkit-linear-gradient(bottom left, #1305e6, lightcyan, #9a9bfa);
+    background: linear-gradient(bottom left, #1305e6, lightcyan, #9a9bfa);
+
+}
+
+.page4 .picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.05rem 0 0 -1.5rem;
+    width: 50px;
+    height: 60px;
+    -webkit-transform: translateY(-1.7rem);
+    transform: translateY(-1.7rem);
+
+}
+
+.page4 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2rem 0 0 -.5rem;
+    font-size: 28px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.page4 .Show1_textS2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.1rem 0 0 -.15rem;
+    font-size: 20px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.page4 .Show1_textS3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.1rem 0 0 -.15rem;
+    font-size: 20px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.page4 .Show1_textS4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.15rem 0 0 -.1rem;
+    font-size: 20px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.skill {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: center;
+    font-weight: normal;
+    text-decoration: none;
+    width: 1.66rem;
+    top: 0.05rem;
+    left: 0.8rem;
+    opacity: 0;
+}
+
+.rank1 {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.Rank li {
+    position: absolute
+}
+
+.light {
+    width: 1rem;
+    height: .69rem;
+    position: absolute;
+    left: .05rem;
+}
+
+.light1 {
+    top: .56rem;
+}
+
+.light2 {
+    top: 1.6rem;
+}
+
+.light3 {
+    top: 2.7rem;
+}
+
+.light4 {
+    top: 3.8rem;
+}
+
+.light .hasLi {
+    left: -0.1rem;
+    height: .88rem;
+    width: 1.17rem;
+    top: -0.1rem;
+    opacity: 0
+}
+
+.light img {
+    width: 100%;
+    height: 100%;
+    position: absolute
+}
+
+.block1 {
+    top: .75rem
+}
+
+.block2 {
+    top: 1.75rem
+}
+
+.block3 {
+    top: 2.85rem
+}
+
+.block4 {
+    top: 3.95rem
+}
+
+.block img {
+    width: .1rem;
+    height: .44rem;
+    position: absolute;
+}
+
+.block1 img:nth-child(1), .block2 img:nth-child(1), .block3 img:nth-child(1), .block4 img:nth-child(1) {
+    left: 1.2rem;
+}
+
+.block1 img:nth-child(2), .block2 img:nth-child(2), .block3 img:nth-child(2), .block4 img:nth-child(2) {
+    left: 1.4rem;
+}
+
+.block1 img:nth-child(3), .block2 img:nth-child(3), .block3 img:nth-child(3), .block4 img:nth-child(3) {
+    left: 1.6rem;
+}
+
+.block1 img:nth-child(4), .block2 img:nth-child(4), .block3 img:nth-child(4), .block4 img:nth-child(4) {
+    left: 1.8rem;
+}
+
+.block1 img:nth-child(5), .block2 img:nth-child(5), .block3 img:nth-child(5), .block4 img:nth-child(5) {
+    left: 2rem;
+}
+
+.block1 img:nth-child(6), .block2 img:nth-child(6), .block3 img:nth-child(6), .block4 img:nth-child(6) {
+    left: 2.2rem;
+}
+
+.block1 img:nth-child(7), .block2 img:nth-child(7), .block3 img:nth-child(7), .block4 img:nth-child(7) {
+    left: 2.4rem;
+}
+
+.block1 img:nth-child(8), .block2 img:nth-child(8), .block3 img:nth-child(8), .block4 img:nth-child(8) {
+    left: 2.6rem;
+}
+
+.block1 img:nth-child(9), .block2 img:nth-child(9), .block3 img:nth-child(9), .block4 img:nth-child(9) {
+    left: 2.8rem;
+}
+
+.block1 img:nth-child(10), .block2 img:nth-child(10), .block3 img:nth-child(10), .block4 img:nth-child(10) {
+    left: 3rem;
+}
+
+.spec img {
+    opacity: 0;
+    top: -.03rem;
+    width: .14rem;
+    height: .5rem
+}
+
+.Show1 {
+    position: absolute;
+    width: .61rem;
+    top: .2rem;
+    left: .4rem;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    text-align: center;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 1.5;
+    font-style: normal;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    opacity: 0
+}
+
+#page4 .person {
+    -webkit-animation: bounceInDown 800ms ease 400ms both;
+    animation: bounceInDown 800ms ease 400ms both;
+}
+
+#page4 .skill {
+    -webkit-animation: fadeIn 600ms ease 500ms both;
+    animation: fadeIn 600ms ease 500ms both;
+}
+
+#page4 .hasLi1 {
+    -webkit-animation: fadeIn 10ms ease 2200ms both running;
+    animation: fadeIn 10ms ease 2200ms both running;;
+}
+
+#page4 .hasLi2 {
+    -webkit-animation: fadeIn 10ms ease 2800ms both running;
+    animation: fadeIn 10ms ease 2800ms both running;
+}
+
+#page4 .hasLi3 {
+    -webkit-animation: fadeIn 10ms ease 3400ms both running;
+    animation: fadeIn 10ms ease 3400ms both running;
+}
+
+#page4 .hasLi4 {
+    -webkit-animation: fadeIn 10ms ease 4000ms both running;
+    animation: fadeIn 10ms ease 4000ms both running;
+}
+
+#page4 .textS1 {
+    -webkit-animation: zoomIn 1000ms ease 2400ms both running;
+    animation: zoomIn 1000ms ease 2400ms both running;
+}
+
+#page4 .textS2 {
+    -webkit-animation: zoomIn 1000ms ease 3000ms both running;
+    animation: zoomIn 1000ms ease 3000ms both running;
+}
+
+#page4 .textS3 {
+    -webkit-animation: zoomIn 1000ms ease 3600ms both running;
+    animation: zoomIn 1000ms ease 3600ms both running;
+}
+
+#page4 .textS4 {
+    -webkit-animation: zoomIn 1000ms ease 4200ms both running;
+    animation: zoomIn 1000ms ease 4200ms both running;
+}
+
+#page4 .specialShow1 {
+    -webkit-animation: fadeIn 10ms ease 4300ms both running;
+    animation: fadeIn 10ms ease 4300ms both running;
+}
+
+#page4 .normal1 {
+    -webkit-animation: fadeOut 10ms ease 4300ms both running;
+    animation: fadeOut 10ms ease 4300ms both running;
+}
+
+#page4 .specialShow2 {
+    -webkit-animation: fadeIn 10ms ease 4400ms both running;
+    animation: fadeIn 10ms ease 4400ms both running;
+}
+
+#page4 .normal2 {
+    -webkit-animation: fadeOut 10ms ease 4400ms both running;
+    animation: fadeOut 10ms ease 4400ms both running;
+}
+
+#page4 .specialShow3 {
+    -webkit-animation: fadeIn 10ms ease 4500ms both running;
+    animation: fadeIn 10ms ease 4500ms both running;
+}
+
+#page4 .normal3 {
+    -webkit-animation: fadeOut 10ms ease 4500ms both running;
+    animation: fadeOut 10ms ease 4500ms both running;
+}
+
+#page4 .specialShow4 {
+    -webkit-animation: fadeIn 10ms ease 4600ms both running;
+    animation: fadeIn 10ms ease 4600ms both running;
+}
+
+#page4 .normal4 {
+    -webkit-animation: fadeOut 10ms ease 4600ms both running;
+    animation: fadeOut 10ms ease 4600ms both running;
+}
+
+#page4 .specialShow5 {
+    -webkit-animation: fadeIn 10ms ease 4700ms both running;
+    animation: fadeIn 10ms ease 4700ms both running;
+}
+
+#page4 .normal5 {
+    -webkit-animation: fadeOut 10ms ease 4800ms both running;
+    animation: fadeOut 10ms ease 4800ms both running;
+}
+
+#page4 .specialShow6 {
+    -webkit-animation: fadeIn 10ms ease 4900ms both running;
+    animation: fadeIn 10ms ease 4900ms both running;
+}
+
+#page4 .normal6 {
+    -webkit-animation: fadeOut 10ms ease 4900ms both running;
+    animation: fadeOut 10ms ease 4900ms both running;
+}
+
+#page4 .specialShow7 {
+    -webkit-animation: fadeIn 10ms ease 5000ms both running;
+    animation: fadeIn 10ms ease 5000ms both running;
+}
+
+#page4 .normal7 {
+    -webkit-animation: fadeOut 10ms ease 5000ms both running;
+    animation: fadeOut 10ms ease 5000ms both running;
+}
+
+#page4 .specialShow8 {
+    -webkit-animation: fadeIn 10ms ease 5100ms both running;
+    animation: fadeIn 10ms ease 5100ms both running;
+}
+
+#page4 .normal8 {
+    -webkit-animation: fadeOut 10ms ease 5100ms both running;
+    animation: fadeOut 10ms ease 5100ms both running;
+}
+
+#page4 .specialShow9 {
+    -webkit-animation: fadeIn 10ms ease 5200ms both running;
+    animation: fadeIn 10ms ease 5200ms both running;
+}
+
+#page4 .normal9 {
+    -webkit-animation: fadeOut 10ms ease 5200ms both running;
+    animation: fadeOut 10ms ease 5200ms both running;
+}
+
+#page4 .specialShow10 {
+    -webkit-animation: fadeIn 10ms ease 5300ms both running;
+    animation: fadeIn 10ms ease 5300ms both running;
+}
+
+#page4 .normal10 {
+    -webkit-animation: fadeOut 10ms ease 5300ms both running;
+    animation: fadeOut 10ms ease 5300ms both running;
+}
+
+/*page5*/
+.page5 {
+    background: url("../img/sc_girl1.png") no-repeat;
+    background-size: cover;
+
+}
+
+.page5 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.1rem 0 0 -1.1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.page5 .adr1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 1.31rem 0 0 -1.6rem;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.page5 .adr2 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 1.91rem 0 0 -1.6rem;
+    font-size: 22px;
+    font-family: sans-serif;
+
+}
+
+.page5 .tip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.95rem 0 0 -1rem;
+    font-size: 26px;
+    font-family: sans-serif;
+}
+
+#page5 {
+    -webkit-animation: fadeIn 1s .5s both;
+    animation: fadeIn 1s .5s both;
+}
+
+#page5 img {
+    -webkit-animation: bounceIn 1s 1s both;
+    animation: bounceIn 1s 1s both;
+}
+
+#page5 .adr1 {
+    -webkit-animation: slideOutUp 1s 1s 2 forwards;
+    animation: slideOutUp 1s 1s 2 forwards;
+}
+
+#page5 .adr2 {
+    -webkit-animation: slideOutUp 1s 1s 2 forwards;
+    animation: slideOutUp 1s 1s 2 forwards;
+}
+
+#page5 .tip {
+    -webkit-animation: slideOutUp 1s 2 forwards;
+    animation: slideOutUp 1s 2 forwards;
+}
+
+

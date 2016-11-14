@@ -1,0 +1,506 @@
+html {
+    font-size: 100px; /*640设计稿:1REM=100PX*/
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*超出宽度或高度的部分，就隐藏了。
+    */
+}
+
+/*--CUBE--*/
+.hbu_cube {
+    width: 100%;
+    height: 100%;
+    background: url("../img/zf_cubeBg.jpg") no-repeat;
+    background-size: cover;
+
+    perspective: 2000px; /*桌面（显示屏吧）到你设置3D场景的观察距离*/
+}
+
+.hbu_cube .cube_bigtip {
+    text-align: center;
+    color: #007aff;
+    line-height: 150px;
+    font-family: 楷体;
+}
+
+.hbu_cube .cube_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.55rem 0 0 -2.55rem;
+    width: 5.1rem;
+    height: 5.1rem;
+
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform-origin: center center 0;
+    transform-origin: center center 0;
+
+    -webkit-transform: scale(0.6) rotateY(30deg) rotateX(45deg);
+    transform: scale(0.6) rotateY(30deg) rotateX(45deg);
+
+    /*让魔方在旋转的时候有动画过渡效果*/
+    -webkit-transition: all .5s;
+    transition: all .5s; /*所有变换延续0.5秒是为了能看出其魔方的旋转的效果*/
+}
+
+.hbu_cube .cube_box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.55rem 0 0 -2.55rem;
+    width: 100%;
+    height: 100%;
+}
+
+.hbu_cube .cube_box img:nth-child(1) {
+    -webkit-transform: translateZ(2.55rem);
+    transform: translateZ(2.55rem);
+}
+
+.hbu_cube .cube_box img:nth-child(2) {
+    -webkit-transform: translateZ(-2.55rem) rotateY(180deg);
+    transform: translateZ(-2.55rem) rotateY(180deg);
+}
+
+.hbu_cube .cube_box img:nth-child(3) {
+    -webkit-transform: translateX(-2.55rem) rotateY(-90deg);
+    transform: translateX(-2.55rem) rotateY(-90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(4) {
+    -webkit-transform: translateX(2.55rem) rotateY(90deg);
+    transform: translateX(2.55rem) rotateY(90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(5) {
+    -webkit-transform: translateY(-2.55rem) rotateX(-90deg);
+    transform: translateY(-2.55rem) rotateX(-90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(6) {
+    -webkit-transform: translateY(2.55rem) rotateX(90deg);
+    transform: translateY(2.55rem) rotateX(90deg);
+}
+
+.hbu_cube .cube_tip {
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -1.97rem;
+    width: 3.94rem;
+    height: .44rem;
+    background: url("../img/zf_cubeTip.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*--SWIPER滑动区域--*/
+.hbu_swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+}
+
+.hbu_swiper .hbu_return {
+    z-index: 2000;
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+    width: .64rem;
+    height: .75rem;
+    background: url("../img/zf_return.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.swiper-container, .swiper-wrapper, .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+/*PAGE1*/
+.page1 {
+    background: url("../img/true3.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page1 dl {
+
+    width: 5.4rem;
+    height: 7.2rem;
+    text-align: center;
+    color: mediumvioletred;
+    line-height: 50px;
+    font-family: 楷体;
+    font-size: 20px;
+
+}
+
+.page1 dl img {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.page1 dl dd {
+    position: absolute;
+    left: .5rem;
+    top: auto;
+    text-align: left;
+    line-height: 45px;
+    font-family: 楷体;
+    font-size: 20px;
+}
+
+/*PAGE2*/
+.page2 {
+    background: pink;
+}
+
+.page2 h2 {
+    text-align: center;
+    font-family: 楷体;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.page2 img {
+    width: 3.15rem;
+    height: 3rem;
+    opacity: 0;
+}
+
+.page2 img:nth-child(1) {
+    -webkit-transform: rotate(30deg) translate(.8rem, .6rem);
+    transform: rotate(30deg) translate(.8rem, .6rem);
+}
+
+.page2 img:nth-child(2) {
+    -webkit-transform: rotate(-20deg) translate(-.4rem, .6rem);
+    transform: rotate(-20deg) translate(-.4rem, .6rem);
+}
+
+.page2 img:nth-child(3) {
+    -webkit-transform: rotate(10deg) translate(.8rem, .5rem);
+    transform: rotate(10deg) translate(.8rem, .5rem);
+
+}
+
+.page2 img:nth-child(4) {
+    -webkit-transform: rotate(-20deg) translate(-.3rem, .5rem);
+    transform: rotate(-20deg) translate(-.3rem, .5rem);
+}
+
+.page2 img:nth-child(5) {
+    -webkit-transform: rotate(40deg) translate(1rem, -.2rem);
+    transform: rotate(40deg) translate(1rem, -.2rem);
+}
+
+.page2 img:nth-child(6) {
+    -webkit-transform: rotate(-30deg) translate(0rem, .5rem);
+    transform: rotate(-30deg) translate(0rem, .5rem);
+}
+
+#page2 img:nth-child(1) {
+    -webkit-animation: fadeInLeft 1.5s forwards;
+    animation: fadeInLeft 1.5s forwards;
+}
+
+#page2 img:nth-child(2) {
+    -webkit-animation: fadeInLeft 1.5s .5s forwards;
+    animation: fadeInLeft 1.5s .5s forwards;
+}
+
+#page2 img:nth-child(3) {
+    -webkit-animation: fadeInLeft 1.5s 1s forwards;
+    animation: fadeInLeft 1.5s 1s forwards;
+}
+
+#page2 img:nth-child(4) {
+    -webkit-animation: fadeInLeft 1.5s 1.5s forwards;
+    animation: fadeInLeft 1.5s 1.5s forwards;
+}
+
+#page2 img:nth-child(5) {
+    -webkit-animation: fadeInLeft 1.5s 2s forwards;
+    animation: fadeInLeft 1.5s 2s forwards;
+}
+
+#page2 img:nth-child(6) {
+    -webkit-animation: fadeInLeft 1.5s 2.5s forwards;
+    animation: fadeInLeft 1.5s 2.5s forwards;
+}
+
+/*PAGE3*/
+.page3 {
+    background: url("../img/trueLNF70VIB.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page3 h2 {
+    position: absolute;
+    left: 0;
+    top: .8rem;
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    color: #665C50;
+    font-size: .6rem;
+    font-family: Microsoft JhengHei; /*设置字体的样式:文字是黑体*/
+    font-weight: normal; /*normal:文字不加粗,bold/bolder:文字加粗*/
+
+    opacity: 0;
+}
+
+.page3 .imgBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.4rem 0 0 -2.56rem; /*定位在中间后还需要下移50PX:-2.9+.5*/
+    width: 5.12rem;
+    height: 5.8rem;
+}
+
+.page3 .imgBox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.5rem 0 0 -.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+
+    opacity: 0;
+}
+
+.page3 .imgBox img:nth-child(1) {
+    margin: -.85rem 0 0 -.66rem;
+    width: 1.32rem;
+    height: 1.7rem;
+    border-radius: 0;
+}
+
+/*把我们当前第二页需要运动的动画都放在#PAGE2下*/
+#page3 .imgBox img:nth-child(1) {
+    -webkit-animation: wobble 1s 3 forwards;
+    animation: wobble 1s 3 forwards;
+}
+
+#page3 .imgBox img:nth-child(2) {
+    -webkit-animation: page3Move1 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page3Move1 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page3 .imgBox img:nth-child(3) {
+    -webkit-animation: page3Move2 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page3Move2 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page3 .imgBox img:nth-child(4) {
+    -webkit-animation: page3Move3 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page3Move3 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page3 .imgBox img:nth-child(5) {
+    -webkit-animation: page3Move4 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page3Move4 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page3 .imgBox img:nth-child(6) {
+    -webkit-animation: page3Move5 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page3Move5 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page3 .imgBox img:nth-child(7) {
+    -webkit-animation: page3Move6 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page3Move6 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page3 h2 {
+    -webkit-animation: bounceInLeft 1s both;
+    animation: bounceInLeft 1s both;
+}
+
+/*PAGE4*/
+.page4 {
+    background: url("../img/trueLKQTT3WO.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page4 h2 {
+    position: absolute;
+    left: 0;
+    top: .8rem;
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    color: black;
+    font-size: .6rem;
+    font-family: DFkai-SB;
+    font-weight: normal;
+    opacity: 0;
+}
+
+.page4 h3 {
+    position: absolute;
+    left: 0;
+    top: 5.0rem;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    color: black;
+    font-size: .4rem;
+    font-family: Microsoft JhengHei;
+    font-weight: normal;
+    opacity: 0;
+}
+
+.page4 h4 {
+    position: absolute;
+    left: 0;
+    top: 6.0rem;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    color: black;
+    font-size: .4rem;
+    font-family: Microsoft JhengHei;
+    font-weight: normal;
+    opacity: 0;
+}
+
+.page4 h5 {
+    position: absolute;
+    left: 0;
+    top: 7.0rem;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    color: black;
+    font-size: .4rem;
+    font-family: Microsoft JhengHei;
+    font-weight: normal;
+    opacity: 0;
+}
+
+#page4 h2 {
+    -webkit-animation: lightSpeedIn 1s forwards;
+    animation: lightSpeedIn 1s forwards;
+}
+
+#page4 h3 {
+    -webkit-animation: flipInX 1s forwards;
+    animation: flipInX 1s forwards;
+}
+
+#page4 h4 {
+    -webkit-animation: rollIn 1s forwards;
+    animation: rollIn 1s forwards;
+}
+
+#page4 h5 {
+    -webkit-animation: bounceInUp 1s forwards;
+    animation: bounceInUp 1s forwards;
+}
+
+/*PAGE5*/
+.page5 {
+    background: url("../img/trueTKT3AD97.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page5 h1 {
+    position: absolute;
+    left: 0;
+    top: .8rem;
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    color: black;
+    font-size: .6rem;
+    font-family: DFkai-SB;
+    font-weight: normal;
+    opacity: 0;
+}
+
+.page5 h2 {
+    position: absolute;
+    left: 0;
+    top: 5.0rem;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    color: black;
+    font-size: .4rem;
+    font-family: Microsoft JhengHei;
+    font-weight: normal;
+    opacity: 0;
+}
+
+.page5 h3 {
+    position: absolute;
+    left: 0;
+    top: 6.0rem;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    color: black;
+    font-size: .4rem;
+    font-family: Microsoft JhengHei;
+    font-weight: normal;
+    opacity: 0;
+}
+
+#page5 h1 {
+    -webkit-animation: lightSpeedIn 1s forwards;
+    animation: lightSpeedIn 1s forwards;
+}
+
+#page5 h2 {
+    -webkit-animation: zoomIn1s forwards;
+    animation: zoomIn 1s forwards;
+}
+
+#page5 h3 {
+    -webkit-animation: zoomIn 1s forwards;
+    animation: zoomIn 1s forwards;
+}
+
+/*PAGE6*/
+.page6 {
+    background: url("../img/trueVAWN543B.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page6 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 楷体;
+    font-size: .5rem;
+    opacity: 0;
+}
+
+#page6 h1 {
+    -webkit-animation: lightSpeedIn 1s forwards;
+    animation: lightSpeedIn 1s forwards;
+}

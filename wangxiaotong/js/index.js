@@ -1,11 +1,15 @@
 /**
  * Created by Administrator on 2016/6/10.
  */
+document.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+}, false);
 
-(function (desW) {
+~function (desW) {
     var winW = document.documentElement.clientWidth;
     document.documentElement.style.fontSize = winW / desW * 100 + "px";
-})(640);
+}(640);
+
 function fixPagesHeight() {
     $('.swiper-slide,.swiper-container').css({
         height: $(window).height(),
@@ -16,6 +20,7 @@ $(window).on('resize', function () {
     fixPagesHeight();
 });
 fixPagesHeight();
+
 var step = 0;
 var arrow = document.querySelector(".arrow");
 var mySwiper = new Swiper('.swiper-container', {
