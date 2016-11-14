@@ -25,7 +25,7 @@ var mySwiper = new Swiper('.swiper-container', {
         }
     }
 });
-mySwiper.slideTo(2, 0);
+mySwiper.slideTo(4, 0);
 
 
 /*音频的自动播放*/
