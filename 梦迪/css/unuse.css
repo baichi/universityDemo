@@ -1,0 +1,22 @@
+body,div,html£¬ul,li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.ul{
+    width: 400px;
+    height: 500px;
+    line-height:50px;
+}
+.ul li{
+    list-style: none;
+}
+.ul .li1{
+    color: yellow;
+}
+.ul .li2{
+    color: blue;
+}
+.ul .li3{
+    color: deeppink;
+}

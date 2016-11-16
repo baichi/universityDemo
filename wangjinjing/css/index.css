@@ -1,0 +1,491 @@
+html {
+    font-size: 100px; /*640设计稿:1REM=100PX*/
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*--CUBE--*/
+.hbu_cube {
+    width: 100%;
+    height: 100%;
+    background: url("../img/zf_cubeBg.jpg") no-repeat;
+    background-size: cover;
+
+    perspective: 2000px;
+}
+
+.hbu_cube .cube_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.55rem 0 0 -2.55rem;
+    width: 5.1rem;
+    height: 5.1rem;
+
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform-origin: center center 0;
+    transform-origin: center center 0;
+
+    -webkit-transform: scale(0.6) rotateY(30deg) rotateX(45deg);
+    transform: scale(0.6) rotateY(30deg) rotateX(45deg);
+
+    /*让魔方在旋转的时候有动画过渡效果*/
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.hbu_cube .cube_box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.55rem 0 0 -2.55rem;
+    width: 100%;
+    height: 100%;
+}
+
+.hbu_cube .cube_box img:nth-child(1) {
+    -webkit-transform: translateZ(2.55rem);
+    transform: translateZ(2.55rem);
+}
+
+.hbu_cube .cube_box img:nth-child(2) {
+    -webkit-transform: translateZ(-2.55rem) rotateY(180deg);
+    transform: translateZ(-2.55rem) rotateY(180deg);
+}
+
+.hbu_cube .cube_box img:nth-child(3) {
+    -webkit-transform: translateX(-2.55rem) rotateY(-90deg);
+    transform: translateX(-2.55rem) rotateY(-90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(4) {
+    -webkit-transform: translateX(2.55rem) rotateY(90deg);
+    transform: translateX(2.55rem) rotateY(90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(5) {
+    -webkit-transform: translateY(-2.55rem) rotateX(-90deg);
+    transform: translateY(-2.55rem) rotateX(-90deg);
+}
+
+.hbu_cube .cube_box img:nth-child(6) {
+    -webkit-transform: translateY(2.55rem) rotateX(90deg);
+    transform: translateY(2.55rem) rotateX(90deg);
+}
+
+.hbu_cube .cube_tip {
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -1.97rem;
+    width: 3.94rem;
+    height: .44rem;
+    background: url("../img/zf_cubeTip.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*--SWIPER--*/
+.hbu_swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../img/zf_cubeBg.jpg") no-repeat;
+}
+
+.hbu_swiper .hbu_return {
+    z-index: 2000;
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+    width: .64rem;
+    height: .75rem;
+    background: url("../img/zf_return.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.swiper-container, .swiper-wrapper, .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+/*PAGE1*/
+.page1 {
+    background: url("../img/bg5.jpg") no-repeat;
+    background-size: cover;
+
+}
+
+.page1 dl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3.6rem 0 0 -2.7rem;
+    width: 5.4rem;
+    height: 7.2rem;
+}
+
+.page1 dl dt {
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    color: #5975FF;
+    font-size: .4rem;
+
+}
+
+.page1 dl dd {
+    position: relative;
+    padding-left: .64rem;
+    height: .58rem;
+    line-height: .58rem;
+    border-top: .02rem dashed rgba(255, 255, 255, 0.3);
+
+}
+
+.page1 dl dd em {
+    z-index: 1000; /*调整层级*/
+    position: absolute;
+    left: .15rem;
+    top: 50%;
+    margin-top: -.24rem;
+    width: .36rem;
+    height: .42rem;
+    line-height: .42rem;
+    text-align: center;
+    color: #FFF;
+    font-size: .2rem;
+    font-style: normal;
+    background: url("../img/zf_outline.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.page1 dl dd a {
+    position: relative;
+    z-index: 1000; /*调整层级*/
+    display: block;
+    color: #000;
+    font-size: .28rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*PAGE2*/
+.page2 {
+    background: url("../img/bg6.jpg") no-repeat;
+    background-size: cover;
+}
+
+.page2 h2 {
+    position: absolute;
+    left: 0;
+    top: .8rem;
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    color: #665C50;
+    font-size: .6rem;
+    font-family: Microsoft JhengHei; /*设置字体的样式:文字是黑体*/
+    font-weight: normal; /*normal:文字不加粗,bold/bolder:文字加粗*/
+
+    opacity: 0;
+}
+
+.page2 .imgBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.4rem 0 0 -2.56rem; /*定位在中间后还需要下移50PX:-2.9+.5*/
+    width: 5.12rem;
+    height: 5.8rem;
+}
+
+.page2 .imgBox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.5rem 0 0 -.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+
+    opacity: 0;
+}
+
+.page2 .imgBox img:nth-child(1) {
+    margin: -.85rem 0 0 -.66rem;
+    width: 1.32rem;
+    height: 1.7rem;
+    border-radius: 0;
+}
+
+/*把我们当前第二页需要运动的动画都放在#PAGE2下*/
+#page2 .imgBox img:nth-child(1) {
+    -webkit-animation: wobble 1s 3 forwards;
+    animation: wobble 1s 3 forwards;
+}
+
+#page2 .imgBox img:nth-child(2) {
+    -webkit-animation: page2Move1 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move1 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(3) {
+    -webkit-animation: page2Move2 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move2 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(4) {
+    -webkit-animation: page2Move3 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move3 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(5) {
+    -webkit-animation: page2Move4 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move4 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(6) {
+    -webkit-animation: page2Move5 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move5 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 .imgBox img:nth-child(7) {
+    -webkit-animation: page2Move6 .5s .5s forwards, tangle 1s 1s infinite forwards;
+    animation: page2Move6 .5s .5s forwards, tangle 1s 1s infinite forwards;
+}
+
+#page2 h2 {
+    -webkit-animation: bounceInLeft 1s both;
+    animation: bounceInLeft 1s both;
+}
+
+/*PAGE3*/
+.page3 {
+    background: url("../img/bg7.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.white_back {
+    position: absolute;
+    left: .45rem;
+    top: 2.3rem;
+    width: 5.2rem;
+    height: 7rem;
+    background: url("../img/bg3.png") no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+.basic-h2 {
+    position: absolute;
+    left: .35rem;
+    top: .5rem;
+    line-height: .8rem;
+    text-align: center;
+    font-size: .5rem;
+    color: #000000;
+
+}
+
+.page3 .basic_ul {
+    position: absolute;
+    left: .45rem;
+    top: 1.5rem;
+    color: #000000;
+    list-style: none;
+}
+
+.page3 .basic_ul li {
+    padding-bottom: .175rem;
+    height: .4rem;
+    line-height: .5rem;
+    font-size: .26rem;
+    list-style: none;
+}
+
+.page3 .me {
+    position: absolute;
+    top: .8rem;
+    right: .5rem;
+    width: 1.5rem;
+    height: 1.9rem;
+    background: url("../img/jing.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#page3 .white_back {
+    -webkit-animation: fadeIn 2s 0.2s both;
+    animation: fadeIn 2s 0.2s both;
+}
+
+#page3 h2 {
+    -webkit-animation: fadeIn 2s 0.5s both;
+    animation: rollIn 2s 0.5s both;
+}
+
+#page3 ul {
+    -webkit-animation: bounceInLeft 2s 1s both;
+    animation: bounceInLeft 2s 1s both;
+}
+
+#page3 .me {
+    -webkit-animation: zoomInRight 2s 1.3s both;
+    animation: zoomInRight 2s 1.3s both;
+}
+
+/*PAGE4*/
+.page4 {
+    background: url("../img/bg4.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.page4 .content {
+    /*h2标题*/
+    margin: 1rem auto;
+    width: 2rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .5rem;
+    opacity: 0;
+}
+
+.callme {
+    /*电话图片*/
+    margin: .2rem auto;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0;
+}
+
+.callme img {
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    /*ul*/
+    margin: .5rem auto;
+    width: 2rem;
+}
+
+.info li {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .36rem;
+    color: black;
+    opacity: 0;
+}
+
+#page4 .content {
+    -webkit-animation: lightSpeedIn 1s 0s both;
+    animation: lightSpeedIn 1s 0s both;
+}
+
+#page4 .callme {
+    -webkit-animation: fadeIn 1s 0.3s both;
+    animation: fadeIn 1s 0.3s both;
+}
+
+#page4 .phone {
+    -webkit-animation: flip 1s 0.6s both;
+    animation: flip 1s 0.6s both;
+}
+
+#page4 .QQ {
+    -webkit-animation: flip 1s 0.9s both;
+    animation: flip 1s 0.9s both;
+}
+
+/*PAGE5*/
+.page5 {
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.title {
+    margin: .5rem auto 0;
+    letter-spacing: .05rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: crimson;
+    opacity: 0;
+}
+
+.page5 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4.5rem;
+    height: 3rem;
+    opacity: 0;
+}
+
+.page5 img:nth-child(2) {
+    left: -200%;
+    top: 25%;
+}
+
+.page5 img:nth-child(3) {
+    left: 100%;
+    top: 50%;
+}
+
+#page5 h2 {
+    -webkit-animation: zoomIn 1s .1s both;
+    animation: zoomIn 1s .1s both;
+}
+
+#page5 img:nth-child(2) {
+    -webkit-animation: page5Move1 1s 1s both;
+    animation: page5Move1 1s 1s both;
+}
+
+#page5 img:nth-child(3) {
+    -webkit-animation: page5Move2 1s 1.5s both;
+    animation: page5Move2 1s 1.5s both;
+}
+
+/*PAGE6*/
+.page6 {
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg4.jpg") no-repeat;
+    background-size: cover;
+}
+
+.view {
+    margin: 2rem auto 0;
+    letter-spacing: .05rem;
+    font-size: 1rem;
+    line-height: 3rem;
+    text-align: center;
+    color: blueviolet;
+    opacity: 0;
+}
+
+#page6 .view {
+    -webkit-animation: zoomIn 1s .1s both;
+    animation: zoomIn 1s .1s both;
+}
+
+
+
+
