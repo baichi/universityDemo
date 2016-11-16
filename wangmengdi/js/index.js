@@ -1,3 +1,7 @@
+document.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+}, false);
+
 /*1、SWIPER*/
 var swiperRender = (function () {
     var $makisuBox = $('#makisuBox');
